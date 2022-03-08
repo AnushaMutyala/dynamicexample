@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_07_093546) do
+ActiveRecord::Schema.define(version: 2022_03_08_070735) do
 
-  create_table "active_dynamic_attributes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "customizable_id"
-    t.string "customizable_type"
-    t.string "display_title"
-    t.string "title"
-    t.text "value"
+  create_table "active_dynamic_attributes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "customizable_id", null: false
+    t.string "customizable_type", limit: 50
+    t.string "name"
+    t.string "display_name", null: false
     t.integer "datatype"
-    t.boolean "required"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text "value"
+    t.boolean "required", default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.index ["customizable_id"], name: "index_active_dynamic_attributes_on_customizable_id"
     t.index ["customizable_type"], name: "index_active_dynamic_attributes_on_customizable_type"
   end

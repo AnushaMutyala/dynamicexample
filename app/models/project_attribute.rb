@@ -1,0 +1,3 @@
+class ProjectAttribute < ApplicationRecord
+	
+end

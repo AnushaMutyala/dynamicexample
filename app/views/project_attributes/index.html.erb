@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>project Attributes</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Datatype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_attributes.each do |project_attribute| %>
+      <tr>
+        <td><%= project_attribute.title %></td>
+        <td><%= datatype_label project_attribute.datatype %></td>
+        <td><%= link_to 'Show', project_attribute %></td>
+        <td><%= link_to 'Edit', edit_project_attribute_path(project_attribute) %></td>
+        <td><%= link_to 'Destroy', project_attribute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New project Attribute', new_project_attribute_path, class: 'btn btn-primary' %>

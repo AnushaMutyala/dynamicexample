@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customizable_id: 1
+  customizable_type: MyString
+  display_title: MyString
+  title: MyString
+  value: MyText
+  datatype: 1
+  required: false
+
+two:
+  customizable_id: 1
+  customizable_type: MyString
+  display_title: MyString
+  title: MyString
+  value: MyText
+  datatype: 1
+  required: false

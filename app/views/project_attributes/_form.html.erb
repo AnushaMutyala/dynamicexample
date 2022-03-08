@@ -1,0 +1,19 @@
+<%= simple_form_for(project_attribute) do |f| %>
+  <% if project_attribute.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project_attribute.errors.count, "error") %> prohibited this project_attribute from being saved:</h2>
+
+      <ul>
+      <% project_attribute.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.input :title %>
+    <%= f.input :datatype, collection: datatypes_for_select %>
+    <%= f.input :required %>
+
+    <%= f.button :submit %>
+<% end %>

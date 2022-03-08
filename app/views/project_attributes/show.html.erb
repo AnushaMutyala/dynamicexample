@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project_attribute.title %>
+</p>
+
+<p>
+  <strong>Datatype:</strong>
+  <%= @project_attribute.datatype %>
+</p>
+
+<p>
+  <strong>Required:</strong>
+  <%= @project_attribute.required %>
+</p>
+
+<%= link_to 'Edit', edit_project_attribute_path(@project_attribute) %> |
+<%= link_to 'Back', project_attributes_path %>
